@@ -1,0 +1,17 @@
+1. Convert All State Names to Lowercase
+Choose a specific column, use lower function
+
+2. The Day with the Maximum Number of COVID-19 Cases
+Group by date -> Aggregate max of confirmed case for each date -> rename result column -> order by result in descending order -> retrieve first row and access date field
+
+3. The State with the Second-Largest Number of COVID-19 Cases
+Order confirmed cases in descending order -> rank the rows based on number of confirmed cases -> filter rows with rank 2 -> select the state name and retrieve 1st row
+
+4. The Union Territory with the Least Number of Deaths
+Filter the state column with given list of UTs -> group by the states -> Aggregate the sum of deaths -> rename result column -> order the result column (ascending) -> retrieve first row
+
+5. The State with the Lowest Death-to-Total Confirmed Cases Ratio
+Calculate the death to confirmed ratio and add it as a new column -> order by the new column (ascending) -> retrieve first row
+
+6.The Month with the Most New Recovered Cases
+Add new column by retrieving month from date column -> Group by new month column -> Aggregate sum of recovered cases -> Rename the result column -> Order by the result column (descending) -> retrieve first row -> create the month mapping and set the month name
