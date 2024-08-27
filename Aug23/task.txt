@@ -1,0 +1,99 @@
+Snowflake Schema Design
+Fact Tables
+Sales Fact Table
+
+SalesID (Primary Key)
+CustomerID (Foreign Key to Customer Dimension)
+ProductID (Foreign Key to Product Dimension)
+StoreID (Foreign Key to Store Dimension)
+TimeID (Foreign Key to Time Dimension)
+QuantitySold
+SalesAmount
+DiscountAmount
+Promotions Fact Table
+
+PromotionID (Primary Key)
+ProductID (Foreign Key to Product Dimension)
+StoreID (Foreign Key to Store Dimension)
+TimeID (Foreign Key to Time Dimension)
+PromotionType
+DiscountAmount
+EffectiveFrom
+EffectiveTo
+Dimension Tables
+Customer Dimension
+
+CustomerID (Primary Key)
+CustomerName
+CustomerEmail
+CustomerPhone
+CustomerAddress
+CustomerSegment (e.g., Regular, VIP)
+Product Dimension
+
+ProductID (Primary Key)
+ProductName
+Category
+Subcategory
+Brand
+Price
+Store Dimension
+
+StoreID (Primary Key)
+StoreName
+StoreLocation
+StoreType (e.g., Online, Physical)
+Time Dimension
+
+TimeID (Primary Key)
+Date
+DayOfWeek
+Month
+Quarter
+Year
+WeekOfYear
+Data Aggregation
+Daily Sales Aggregation
+
+Granularity: Daily
+Metrics: Total SalesAmount, Total QuantitySold, Total DiscountAmount
+Time Period: Daily
+Weekly Sales Aggregation
+
+Granularity: Weekly
+Metrics: Total SalesAmount, Total QuantitySold, Total DiscountAmount
+Time Period: Week (Monday to Sunday)
+Monthly Sales Aggregation
+
+Granularity: Monthly
+Metrics: Total SalesAmount, Total QuantitySold, Total DiscountAmount
+Time Period: Month (1st to end of month)
+Aggregated Data for Executive Dashboards:
+
+Aggregate data can be pre-computed during ETL or dynamically queried.
+Use OLAP cubes or summary tables to store aggregated data for quick access.
+ETL Process Workflow
+Extract
+
+Source Systems: POS (Point of Sale), CRM (Customer Relationship Management)
+Data Extraction: Periodic extraction from source systems using APIs, batch files, or database queries.
+Extract Data: Sales transactions, customer details, product information, store data, promotion details.
+Transform
+
+Data Cleaning: Remove duplicates, handle missing values, and correct data inconsistencies.
+Data Transformation: Convert data formats, calculate derived metrics (e.g., total sales, discount totals), and normalize data to match schema requirements.
+Data Aggregation: Aggregate data at daily, weekly, and monthly levels for efficiency.
+Load
+
+Load Data into Staging Tables: Load cleaned and transformed data into staging tables for validation.
+Validation: Check for data integrity, consistency, and accuracy.
+Load into Data Warehouse: Move validated data from staging tables into the final fact and dimension tables in the data warehouse.
+Update and Maintenance
+
+Incremental Load: Implement incremental loading to update only changed data rather than full reloads.
+Data Quality Checks: Regular checks to ensure data consistency and accuracy.
+Performance Tuning: Optimize queries and indexing based on query patterns and performance metrics.
+Monitoring and Reporting
+
+ETL Monitoring: Implement monitoring to track ETL process health and performance.
+Reporting: Provide reporting interfaces for stakeholders to access aggregated sales and promotion data.

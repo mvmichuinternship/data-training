@@ -1,0 +1,69 @@
+1. Daily Sales Aggregation
+Objective: Capture sales metrics on a daily basis to monitor daily performance and identify trends or anomalies.
+
+Method:
+
+Granularity: Day
+Metrics:
+Total SalesAmount: Sum of all sales amounts for the day.
+Total QuantitySold: Sum of all quantities sold for the day.
+Total DiscountAmount: Sum of all discount amounts applied for the day.
+Average SalesAmount per Transaction: Average amount of sales per transaction.
+Average QuantitySold per Transaction: Average quantity of items sold per transaction.
+
+
+2. Weekly Sales Aggregation
+Objective: Provide a view of sales performance on a weekly basis to identify trends over a week and support weekly business reviews.
+
+Method:
+
+Granularity: Week (typically Monday to Sunday, but can be adjusted based on business needs)
+Metrics:
+Total SalesAmount: Sum of all sales amounts for the week.
+Total QuantitySold: Sum of all quantities sold for the week.
+Total DiscountAmount: Sum of all discount amounts applied for the week.
+Average SalesAmount per Week: Average total sales amount across weeks.
+Weekly Sales Growth: Week-over-week sales growth percentage.
+
+
+
+3. Monthly Sales Aggregation
+Objective: Analyze sales performance on a monthly basis to understand broader trends and support monthly business strategies.
+
+Method:
+
+Granularity: Month
+Metrics:
+Total SalesAmount: Sum of all sales amounts for the month.
+Total QuantitySold: Sum of all quantities sold for the month.
+Total DiscountAmount: Sum of all discount amounts applied for the month.
+Monthly Sales Growth: Month-over-month sales growth percentage.
+Average SalesAmount per Day: Average daily sales amount for the month.
+
+
+4. Quarterly Sales Aggregation
+Objective: Provide a view of sales performance every quarter to identify seasonal trends and support quarterly reviews and financial planning.
+
+Method:
+
+Granularity: Quarter
+Metrics:
+Total SalesAmount: Sum of all sales amounts for the quarter.
+Total QuantitySold: Sum of all quantities sold for the quarter.
+Total DiscountAmount: Sum of all discount amounts applied for the quarter.
+Average SalesAmount per Quarter: Average total sales amount across quarters.
+Quarterly Sales Growth: Quarter-over-quarter sales growth percentage.
+
+
+5. Annual Sales Aggregation
+Objective: Capture sales performance on an annual basis to assess yearly performance, strategic planning, and long-term trends.
+
+Method:
+
+Granularity: Year
+Metrics:
+Total SalesAmount: Sum of all sales amounts for the year.
+Total QuantitySold: Sum of all quantities sold for the year.
+Total DiscountAmount: Sum of all discount amounts applied for the year.
+Average SalesAmount per Year: Average total sales amount across years.
+Annual Sales Growth: Year-over-year sales growth percentage.
