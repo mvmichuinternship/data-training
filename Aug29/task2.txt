@@ -1,0 +1,5 @@
+Azure Data Factory (ADF) and SQL Server Integration Services (SSIS) are both ETL (Extract, Transform, and Load) tools from Microsoft that read data from different sources and then transform and write it: 
+SSIS
+An on-premises tool that's included with a SQL Server license. It's a good option for on-premises data integration in SQL Server setups. SSIS only supports batch processing, requires manual schema definition for each data source, and has a programming SDK. 
+ADF
+A cloud-based tool that's recommended for cloud-based data integration and scalability. It supports both batch and stream processing, has built-in support for Azure HDInsight, and uses a GUI to design data processing workflows. ADF doesn't have a native programming SDK, but it does have automation using PowerShell. It also offers pay-as-you-go pricing.
